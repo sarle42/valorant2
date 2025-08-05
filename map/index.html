@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant 煙位教學 - 首頁</title>
+    <style>
+        /* 頁面淡出動畫 */
+        .fade-out {
+            animation: fadeOut 0.6s forwards;
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; filter: blur(2px); }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #18181a;
+            /* 佈滿淡淡 sarle 水印 */
+            background-image:
+                repeating-linear-gradient(0deg, transparent 0 40px, rgba(0,0,0,0.01) 40px 80px),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="110" height="80"><text x="0" y="55" font-size="22" font-family="Arial,sans-serif" font-weight="bold" font-style="italic" fill="white" fill-opacity="0.07" transform="rotate(-30 55 40)">sarle</text></svg>');
+            background-repeat: repeat;
+            background-size: 110px 80px;
+            background-position: 0 0, 0 0;
+            color: #fff;
+            margin: 0;
+            min-height: 100vh;
+            /* 柔和花紋邊框，疊加半透明遮罩 */
+            border: 24px solid transparent;
+            border-image: url('https://www.transparenttextures.com/patterns/swirl.png') 40 repeat;
+            border-image-width: 24px;
+            box-sizing: border-box;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            border: 24px solid transparent;
+            border-image: url('https://www.transparenttextures.com/patterns/swirl.png') 40 repeat;
+            border-image-width: 24px;
+            opacity: 0.25;
+        }
+        header { background: #ff4655; padding: 20px; text-align: center; }
+        h1 { margin: 0; }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #23232bcc;
+            padding: 36px 32px;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px 0 #0008, 0 1.5px 0 #fff1 inset;
+            position: relative;
+            z-index: 1;
+        }
+        h2 { color: #ff4655; }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: 30px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .nav a {
+            background: #ff4655;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+            white-space: nowrap;
+            margin-bottom: 4px;
+        }
+        .nav a:hover { background: #e13a48; }
+        .desc { color: #ccc; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <script>
+    // 點擊地圖連結時淡出動畫
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(function() {
+            window.location = link.href;
+          }, 600);
+        });
+      });
+    });
+    </script>
+    <header>
+        <div style="display:flex; justify-content:center; margin-bottom: 8px;">
+            <svg width="64" height="40" viewBox="0 0 64 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 2px 8px #0008); opacity:0.85;">
+                <path d="M2 2L32 38L62 2" stroke="#ff4655" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 2L32 28L52 2" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h1>Valorant 煙位教學</h1>
+        <p class="desc">歡迎來到你的專屬 Valorant 煙位教學網站，按按看不同的地圖吧！</p>
+    </header>
+    <main>
+        <nav class="nav">
+            <a href="ascent.html">義境空島</a>
+            <a href="breeze.html">熱帶樂園</a>
+            <a href="fracture.html">天漠之峽</a>
+            <a href="haven.html">遺落境地</a>
+            <a href="icebox.html">極地寒港</a>
+            <a href="lotus.html">蓮華古城</a>
+            <a href="pearl.html">深海遺珠</a>
+            <a href="split.html">雙塔迷城</a>
+            <a href="sunset.html">日落之城</a>
+            <a href="bind.html">劫境之地</a>
+            <a href="district.html">晶蝕之地</a>
+            <!-- 你可以再新增更多地圖連結 -->
+        </nav>
+        <div style="display:flex; justify-content:center; align-items:center; margin: 48px 0 28px 0;">
+            <svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.32; display:block; filter: drop-shadow(0 4px 24px #ff465566);">
+                <polygon points="160,20 230,160 90,160" fill="#ff4655" fill-opacity="0.32"/>
+                <rect x="80" y="80" width="160" height="60" rx="28" fill="#fff" fill-opacity="0.18"/>
+                <polyline points="120,140 160,60 200,140" stroke="#ff4655" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+        </div>
+        <section style="text-align:center; color:#aaa;">
+            <p>點上方按鈕進入各地圖煙位詳細教學頁面</p>
+            <p>有任何問題來找我！</p>
+            <p style="margin-top:18px;">
+                <a href="https://www.instagram.com/sar.le42/" target="_blank" style="color:#ff4655; text-decoration:underline; font-weight:bold;">點我來找我σ`∀´)σ</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
